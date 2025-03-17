@@ -25,3 +25,21 @@
             document.querySelector(".countdown").innerHTML = "We're Married! 💑"; 
         }
     }, 1000);
+
+    // Initialize ScrollReveal
+ScrollReveal({
+    reset: true, // Reset animations on each scroll
+    distance: '60px', // Animation distance
+    duration: 1000, // Animation duration in milliseconds
+    delay: 200, // Delay before animation starts
+    easing: 'ease-in-out' // Animation easing
+});
+
+// Reveal elements
+ScrollReveal().reveal('#events', { origin: 'top' });
+ScrollReveal().reveal('#wedding-details', { origin: 'bottom' });
+ScrollReveal().reveal('#event-list', { origin: 'left', interval: 200 }); // Interval for staggered reveal
+// ScrollReveal().reveal('#venue', { origin: 'right' });
+// ScrollReveal().reveal('#about-us', { origin: 'bottom'});
+
+
