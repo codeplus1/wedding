@@ -1,13 +1,23 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+/* CSS Variables ==================================================================== */
+:root{
+  --first-color: #800000;
+  --second-color: #697565;
+}
 /* General Styles */
 body,
 html {
   margin: 0;
   padding: 0;
-  font-family: "Big Shoulders Stencil", sans-serif;
-  font-family: "Athiti", sans-serif;
+  font-family: "Lora", serif;
+  /* font-family: "Merriweather", serif; */
+  /* font-family: "Athiti", sans-serif; */
   /* font-weight: 600; */
   height: 100%;
   overflow: hidden;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -38,7 +48,7 @@ html {
   text-align: center;
   width: 100%;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 40px;
   background-color: rgba(243, 215, 215, 0.5);
 }
 
@@ -49,19 +59,19 @@ html {
 
 #wedding-details h1 {
   font-weight: 800;
-  font-size: 3em;
-  color: #333;
+  font-size: 2em;
+  color: var(--first-color);
   margin: 0;
 }
 
 #wedding-details h2 {
-  font-size: 2em;
-  color: #555;
+  font-size: 1em;
+  color: var(--second-color);
   margin: 10px 0;
 }
 
 #wedding-details h3 {
-  font-size: 1.5em;
+  font-size: 1em;
   color: #777;
   margin: 10px 0;
 }
@@ -83,9 +93,9 @@ html {
 }
 
 .countdown span {
-  font-size: 2em;
+  font-size: 1.3em;
   font-weight: bold;
-  color: #333;
+  color: var(--first-color);
   display: block;
 }
 
@@ -93,24 +103,25 @@ html {
 .right-side {
   flex: 1;
   overflow-y: auto;
-  padding: 40px;
+  /* padding: 40px; */
+  padding: 5px 40px 10px 40px;
   background-color: #f9f9f9;
   box-sizing: border-box;
 }
 
 /* Events Section */
 #events {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 #events h2 {
-  font-size: 2em;
-  color: #333;
+  font-size: 1.5em;
+  color: var(--first-color);
   margin-bottom: 20px;
 }
 
 #events p {
-  color: #555;
+  color: var(--second-color);
   margin-bottom: 20px;
 }
 
@@ -121,7 +132,7 @@ html {
 }
 
 .event {
-  border: 2px dashed #eea7a7;
+  border: 2px dashed var(--first-color);
   padding: 20px;
   text-align: center;
   background-color: #fcf4f4;
@@ -130,20 +141,20 @@ html {
 
 .event h3 {
   font-size: 1.5em;
-  color: #333;
+  color: var(--first-color);
   margin: 0 0 10px;
 }
 
 .event p {
   text-align: justify;
-  color: #555;
+  color: var(--second-color);
   margin: 0;
 }
 
 /* About Us Section */
 #about-us {
   display: flex;
-  margin-top: 40px;
+  margin-top: 60px;
   margin-bottom: 40px;
 }
 
@@ -153,6 +164,7 @@ html {
 }
 
 #about-us .image-container img {
+  padding-top: 60px;
   width: 100%;
   height: auto;
   display: block;
@@ -165,12 +177,12 @@ html {
 
 #about-us h2 {
   font-size: 2em;
-  color: #333;
+  color: var(--first-color);
   margin-bottom: 20px;
 }
 
 #about-us p {
-  color: #555;
+  color: var(--second-color);
   text-align: justify;
 }
 
@@ -182,13 +194,23 @@ html {
 
 #venue .image-container {
   flex: 1;
+  /* overflow: hidden; */
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* Adjust width */
+  margin: 20px auto;
+  border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-#venue .image-container img {
+#venue .image-container iframe {
   width: 100%;
   height: auto;
   display: block;
+  height: 250px; /* Adjust height */
+  border: none;
+  border-radius: 12px;
 }
 
 #venue .content-container {
@@ -198,18 +220,18 @@ html {
 
 #venue h2 {
   font-size: 2em;
-  color: #333;
+  color: var(--first-color);
   margin-bottom: 20px;
 }
 
 #venue p {
-  color: #0e7dc8;
+  color: var(--first-color);
   text-decoration: none;
   text-align: justify;
 }
 
 #venue a {
-  color: #555;
+  color: var(--second-color);
   text-decoration: none;
 }
 
@@ -237,6 +259,12 @@ html {
   #about-us .content-container {
     padding-left: 0;
     padding-top: 20px;
+  }
+  #about-us .image-container img {
+    padding-top: 10px;
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   #venue {

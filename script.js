@@ -43,3 +43,48 @@ ScrollReveal().reveal('#event-list', { origin: 'left', interval: 200 }); // Inte
 // ScrollReveal().reveal('#about-us', { origin: 'bottom'});
 
 
+
+
+// Notification
+
+
+
+document.getElementById("setAlarm").addEventListener("click", function () {
+    const weddingDate = new Date("December 28, 2025 10:00:00").getTime();
+
+    if (!("Notification" in window)) {
+        alert("Your browser does not support notifications.");
+        return;
+    }
+
+    Notification.requestPermission().then(permission => {
+        if (permission === "granted") {
+            scheduleAlarm(weddingDate);
+        } else {
+            alert("Please allow notifications to set the alarm.");
+        }
+    });
+});
+
+function scheduleAlarm(weddingTime) {
+    localStorage.setItem("weddingAlarm", weddingTime); // Save in localStorage
+
+    function checkAlarm() {
+        const now = new Date().getTime();
+        const savedTime = localStorage.getItem("weddingAlarm");
+
+        if (savedTime && now >= savedTime) {
+            new Notification("🎉 Wedding Time!", {
+                body: "It's time to celebrate Tulsi & Saroj's wedding! 🎊",
+                icon: "https://cdn-icons-png.flaticon.com/512/869/869869.png"
+            });
+
+            localStorage.removeItem("weddingAlarm"); // Remove after triggering
+            clearInterval(alarmChecker); // Stop checking
+        }
+    }
+
+    const alarmChecker = setInterval(checkAlarm, 5000); // Check every 5 sec
+    alert("Wedding alarm set! Keep this tab open to receive notifications.");
+}
+
