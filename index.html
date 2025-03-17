@@ -4,21 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wedding Invitation</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <div class="container">
+      <!-- Modal Section -->
+      <div id="welcome-modal" class="modal">
+        <div class="modal-content">
+          <span id="close-modal" class="close">&times;</span>
+          <p>You Are Invited</p>
+        </div>
+      </div>
+
       <div class="left-side">
         <img src="1.png" alt="Wedding Image" />
         <section id="wedding-details">
-          <h1>SAROJ 🤝 TULSI</h1>
-          <!-- <h1>सरोज सँग तुलसि</h1> -->
+          <!-- <h1>SAROJ 🤝 TULSI</h1> -->
+          <h1>सरोज 🤝 तुलसी</h1>
           <h2>Are Getting Married</h2>
           <h3>On 20 April 2025</h3>
           <div class="countdown">
@@ -27,7 +31,8 @@
             <div><span id="minutes">00</span> min</div>
             <div><span id="seconds">00</span> sec</div>
           </div>
-          <button id="setAlarm">Set Wedding Alarm</button>
+          <span>You all are invited</span>
+          <!-- <button id="setAlarm">set alarm</button> -->
         </section>
       </div>
 
@@ -42,47 +47,51 @@
         </section>
         <section id="event-list">
           <div class="event">
-            <h3>Chheka</h3>
+            <h3>CHHEKA</h3>
+            <span><b>मिति: </b>2081-11-21 गते</span>
+            <hr />
             <p>
-              The Chheka ceremony is a crucial step in the wedding process,
-              signifying the families' mutual agreement and the formalization of
-              the upcoming marriage. It's a moment of joy and celebration,
-              marking the beginning of the wedding ceremony. It's a formal visit
-              by the bride's family to the groom's home and They bring gifts for
-              the groom and his family, which may include clothing, sweets,
-              fruits, and other symbolic items. <b>Date: 2081-11-21 BS</b> |
-              2025-March-05 AD
+              The Chheka ceremony is done for the mutual agreement of the
+              families andthe formalization of the upcoming marriage. It's a
+              moment of joy and celebration, marking the beginning of the
+              wedding ceremony. It's a formal visit to the groom's home by the
+              bride's family and They bring gifts for the groom and his family,
+              which may include clothing, sweets, fruits, and other symbolic
+              items.
             </p>
           </div>
           <div class="event">
-            <h3>Matkor</h3>
+            <h3>MATKOR</h3>
+            <span><b>मिति:</b> 2082-01-03 गते</span>
+            <hr />
             <p>
-              The Matkor ritual holds a special place in the pre-wedding
-              ceremonies, it is deeply rooted in our traditions. Matkor is a
-              poignant reminder of our connection to nature and the importance
-              of respecting the earth. It is a way of imploring the earth
-              deities to bless the new couple with abundance.
-              <b>Date: 2082-01-03 BS</b> | 2025-April-16 AD
+              The Matkor ritual is of particular significance in the pre-wedding
+              ceremonies, it is deeply rooted in our traditions. Matkor is a a
+              poignant reminder of our interdependence with nature and the
+              significance of respecting the earth. It is a way of pleading the
+              earth gods to bless the new couple with prosperity.
             </p>
           </div>
           <div class="event">
-            <h3>Haldi | Mehendi</h3>
+            <h3>HALDI | BHOJ</h3>
+            <span><b>मिति:</b> 2082-01-06 गते</span>
+            <hr />
             <p>
-              Enjoy the joyous 'Haldi' ceremony, where Bride and Groom both are
-              blessed with turmeric paste, symbolizing purity and prosperity.
-              Also, Join us for a vibrant 'Mehendi' night filled with intricate
-              henna designs, music, and dancing. <b>Date:2082-01-06 BS</b> |
-              2025-April-19 AD
+              Enjoy the serenity of the 'Haldi' ritual, where Bride and Groom
+              both are blessed with turmeric paste, symbolizing purity and
+              prosperity. And also, join us for a vibrant 'Mehendi' evening with
+              exquisite henna designs, music, and dance.
             </p>
           </div>
           <div class="event">
-            <h3>Baraat</h3>
+            <h3>BARAAT</h3>
+            <span><b>मिति:</b> 2082-01-07 गते </span>
+            <hr />
             <p>
-              The Baraat is a highlight of our wedding celebrations. As the sun
-              begins to set our groom be surrounded by his family and friends,
-              all dressed in their finest traditional attire after that they all
-              get moved to bride home for more marriage rituals.
-              <b>Date:2082-01-07 BS</b> | 2025-April-20 AD
+              The Baraat is the peak of our wedding festivities. With the sun
+              begins to position our groom surrounded by his friends and family,
+              wore their finest traditional attire after which they all are
+              taken to bride home for further marriage rituals.
             </p>
           </div>
         </section>
@@ -91,15 +100,15 @@
           <div class="content-container">
             <h2>ABOUT US</h2>
             <p>
-              In the land of our forefathers, where traditions echo through the
-              generations, our love story finds its roots. We, Tulsi Yadav and
-              Saroj Yadav, are deeply connected to the cultural heritage of
-              Mithila, and our wedding is a celebration of this bond. We are
-              honored to share our journey with you, as we blend our lives in a
-              union that honors the past while embracing the future. Join us as
-              we create new memories, anchored in the rich traditions of our
-              beloved community. We are so excited to have you witness our love
-              story unfold and to be a part of this special day.
+              In the midst of Mithila, where generation after generation has
+              believed in traditions. We, Saroj Yadav and Tulsi Yadav, hold dear
+              our cultural tradition and hold our wedding ritual as stunning
+              reflection of that connection. This is not a journey about us—it's
+              about family, community, and the traditions that have shaped us.
+              As we step into this new chapter together, we invite you to
+              celebrate with us, to share in our joy, and to create precious
+              memories. Your presence will make our special day even more
+              special!
             </p>
           </div>
           <div class="image-container">
@@ -122,7 +131,7 @@
           </div>
           <div class="content-container">
             <h2>GROOM VENUE</h2>
-            <p>Bandipur-02</p>
+            <p>Place: <a href="#">कर्जन्हा नं. पा. २, बन्दिपुर</a></p>
             <p>Phone: <a href="tel:+977 9814896965">+977 9814896965</a></p>
             <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
           </div>
