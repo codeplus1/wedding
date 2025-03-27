@@ -22,9 +22,9 @@ html {
 
 /* Modal Styles start======================================================*/
 .modal {
-  display: none; /* Hidden by default */
+  display: none;
   position: fixed;
-  z-index: 1; /* Sit on top */
+  z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
@@ -40,22 +40,59 @@ html {
   width: 80%;
   max-width: 500px;
   border-radius: 8px;
+  font-family: "Poppins", sans-serif; /* Custom Font */
+  text-align: center;
 }
 
+/* Close Button */
 .close {
-  color: #aaa;
+  color: var(--first-color);
   font-size: 28px;
   font-weight: bold;
   position: absolute;
-  top: 10px;
+  top: 20px;
   right: 20px;
+  cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
   color: black;
   text-decoration: none;
+}
+
+/* Confirmation Button */
+.confirm-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+}
+
+.confirm-button:hover {
+  background-color: #45a049;
+}
+
+/* Event Links */
+.event-links {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.event-links a {
+  margin: 0 10px;
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.event-links a:hover {
+  text-decoration: underline 2px solid var(--first-color);
 }
 /* Modal css ended================================ */
 
@@ -347,6 +384,7 @@ footer {
     max-height: none;
     /* overflow-y: auto; */
   }
+
 
   .right-side {
     height: auto;

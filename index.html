@@ -11,17 +11,31 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
       <!-- Modal Section -->
       <div id="welcome-modal" class="modal">
         <div class="modal-content">
-          <span id="close-modal" class="close">&times;</span>
-          <p>You Are Invited Must come</p>
+          <img src="/1.png" alt="Wedding-logo here" width="150px" loading="lazy">
+          <span id="close-modal" class="close"><i class="fas fa-times"></i></span>
+          <p class="welcome-message">You Are Invited! Must come.<br><strong>2082-बेैशाख-07</strong></p>
+          <!-- Confirmation Button -->
+          <button id="confirm-button" class="confirm-button">
+            Yes, I'll be there!
+          </button>
+          <!-- Event Links -->
+          <div class="event-links">
+            <span class="welcome-message">Location यता 👉</span><a href="https://maps.app.goo.gl/vb8AR5o2kKDbNED4A" target="_blank"
+              >View Location</a
+            >
+          </div>
         </div>
       </div>
-
       <div class="left-side">
         <img src="1.png" alt="Wedding Image" />
         <section id="wedding-details">
@@ -125,7 +139,7 @@
           <div class="image-container">
             <!-- <img src="/marriage-invitation.png" alt="Venue QR Image" /> -->
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d692.409008532335!2d86.16470750132616!3d26.88221737023386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2snp!4v1742138397845!5m2!1sen!2snp"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d815.5279301619037!2d86.1645003!3d26.8823085!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ec1b0069687249%3A0x67d6c9b44252a7a4!2sSaroj%20Yadav!5e1!3m2!1sen!2snp!4v1743072859438!5m2!1sen!2snp"
               width="400"
               height="300"
               style="border: 0"
@@ -146,13 +160,96 @@
             <div class="social_media">
               <!-- <a href="#"><i class="fab fa-facebook-f"></i></a>
               <a href="#"><i class="fab fa-instagram"></i></a> -->
-              <p>Copyright © <i>SarojTulsi</i> 2025 </p>
+              <p>Copyright © <i>SarojTulsi</i> 2025</p>
             </div>
           </div>
         </footer>
       </div>
     </div>
 
+    <!-- <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+      // Modal and Confetti
+      window.onload = function () {
+        const modal = document.getElementById("welcome-modal");
+        const closeModal = document.getElementById("close-modal");
+
+        // Show the modal and trigger confetti
+        modal.style.display = "block";
+        launchConfetti();
+
+        // Close the modal when the close button is clicked
+        closeModal.onclick = function () {
+          modal.style.display = "none";
+        };
+
+        // Close the modal if clicking outside the modal content
+        window.onclick = function (event) {
+          if (event.target === modal) {
+            modal.style.display = "none";
+          }
+        };
+
+        // Function to launch confetti
+        function launchConfetti() {
+          confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { x: 0.5, y: 0.5 },
+            colors: ["#bb0000", "#ffffff"], // Customize colors here
+          });
+        }
+      };
+    </script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+      // Modal and Interaction Logic
+      window.onload = function () {
+        const modal = document.getElementById("welcome-modal");
+        const closeModal = document.getElementById("close-modal");
+        const confirmButton = document.getElementById("confirm-button");
+
+        // Automatically show the modal on page load
+        modal.style.display = "block";
+        launchConfetti();
+
+        // Close the modal when the close button is clicked
+        closeModal.onclick = function () {
+          modal.style.display = "none";
+        };
+
+        // Close the modal if clicking outside the modal content
+        // window.onclick = function (event) {
+        //   if (event.target === modal) {
+        //     modal.style.display = "none";
+        //   }
+        // };
+
+        // Add confirmation button interaction
+        confirmButton.onclick = function () {
+          // alert("Thank you for confirming your attendance!");
+          launchConfetti();
+          modal.style.display = "none"; // Close modal after confirmation
+        };
+
+        // Function to launch confetti
+        function launchConfetti() {
+          confetti({
+            particleCount: 150,
+            spread: 70,
+            origin: { x: 0.5, y: 0.5 },
+            colors: ["#bb0000", "#ffffff"], // Customize colors here
+          });
+        }
+
+        // const audio = new Audio("flute.mp3");
+        // audio.addEventListener("canplaythrough", () => {
+        //   audio.play();
+        //   audio.volume = 0.01; // Set volume to minimum (optional)
+        // });
+      };
+    </script>
     <!--===== SCROLL REVEAL =====-->
     <script src="https://unpkg.com/scrollreveal"></script>
 
